@@ -20,10 +20,20 @@ const navButtons = {
 export default class Navbar extends Component {
     render() {
         return (
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <Logo style={logoStyling} />
-                <SignUp style={navButtons} />
-                <Login style={navButtons} />
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <div className='order-0 w-100'>
+                    <Logo style={logoStyling} />
+                </div>
+                <div class="navbar-collapse ml-auto" id="collapsingNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <SignUp style={navButtons} />
+                        </li>
+                        <li class="nav-item">
+                            <Login style={navButtons} />
+                        </li>
+                    </ul>
+                </div>
             </nav>
         )
     }
